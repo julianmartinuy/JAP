@@ -1,20 +1,31 @@
-function login(){
-    let mail=document.getElementById('username').value;
-    let pass=document.getElementById('clave').value;
-    if(mail==="" || password===""){
-        document.getElementById('username').classList.add('error');
-        document.getElementById('clave').classList.add('error');
-        alert ("Debe ingresar mail y contraseña");
+function validation ()
+{
+    var form =document.getElementById("form");
+    var email =document.getElementById("email").value;
+    var text= document.getElementById("text");
+    var pattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (email.match(pattern))
+    {
+        form.classList.add("valid");
+        form.classList.remove("invalid");
+        text.innerHTML="El correo electronico ingresado es valido";
+        text.style.color="#00ff00";
     }
     else
     {
-        localStorage.setItem('correo',mail);
-        location.href='index.html';
+        form.classList.remove("valid");
+        form.classList.add("invalid");
+        text.innerHTML="El correo electronico ingresado NO es valido";
+        text.style.color="#ff0000";
     }
-}
-document.addEventListener('DOMContentLoaded',()=>{
-    document.getElementById('entrada').addEventListener('click',()=>{
-    login();    
+    if (email== "")
+    {
+        form.classList.remove("valid");
+        form.classList.remove("invalid");
+        text.innerHTML="";
+        text.style.color="#00ff00";
+    }
 
-    })
-})
+}
+
+

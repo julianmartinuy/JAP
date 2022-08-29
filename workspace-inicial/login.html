@@ -20,14 +20,15 @@
 <body class="text-center">
   <main class="mt-5">
     <div class="container">
-      <form >
+      <form id="form" action="#">
         <img src="img/login.png" alt width="380" height="150" >
         <h1 class="h3 mb-3 fw-normal">Inicio de sesión</h1> 
         <br>
         <h5>E-mail</h5>
-        <div class="form-floating tamañoform">
-          <input type="email" placeholder="usuario@ejemplo.com" id="mail" class="form-control">
-          <label for="mail"> Email</label>
+        <div class="form-floating tamañoform inputbox">
+          <input type="text" id="email" class="form-control" name="" placeholder="Ingresa E-mail" onkeydown="validation()">
+          <label for="email"> Email</label>
+          <span id="text"></span>
         </div>
         <br>
         <h5>Contraseña</h5>
@@ -36,7 +37,7 @@
           <label for="pass" >Contraseña</label>
         </div>
         <br>
-        <button class="w-100 btn btn-lg btn-primary tamañoform" type="submit" id="entrada" >Ingresar</button>
+        <button class="w-100 btn btn-lg btn-primary tamañoform" type="submit" onclick="validar()" id="entrada" >Ingresar</button>
       </form>
 
 
