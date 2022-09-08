@@ -10,6 +10,7 @@ function validation ()
         form.classList.remove("invalid");
         text.innerHTML="El correo electronico ingresado es valido";
         text.style.color="#00ff00";
+        window.location.href="index.html";
     }
     else
     {
