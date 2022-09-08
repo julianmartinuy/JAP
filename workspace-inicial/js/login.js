@@ -12,6 +12,10 @@ function validation ()
         text.style.color="#008000";
         
 
+
+        text.style.color="#00ff00";
+        window.location.href="index.html";
+
     }
     else
     {

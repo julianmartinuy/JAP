@@ -1,8 +1,8 @@
 //array donde se cargarán los datos recibidos:
-let autosArray = [];
+let productsArray = [];
 
 //función que recibe un array con los datos, y los muestra en pantalla a través el uso del DOM
-function showAutosList(array){
+function showproductsList(array){
     let htmlContentToAppend = "";
 
     for(let i = 0; i < array.length; i++){ 
@@ -16,7 +16,7 @@ function showAutosList(array){
                 <div class="col">
                     <div class="d-flex w-100 justify-content-between">
                         <div class="mb-1">
-                        <h4>`+ products.name +`</h4> 
+                        <h4>`+ products.name +` `+ `-` + ` `+ products.currency + ` `+ products.cost + `</h4> 
                         <p> `+ products.description +`</p> 
                         </div>
                         <small class="text-muted">` + products.soldCount + ` artículos</small> 
@@ -26,26 +26,16 @@ function showAutosList(array){
             </div>
         </div>
         `
-        document.getElementById("informacion").innerHTML = htmlContentToAppend; 
+        document.getElementById("car-type-container").innerHTML = htmlContentToAppend; 
     }
 }
 
-
-/* 
-EJECUCIÓN:
-
--Al cargar la página se llama a getJSONData() pasándole por parámetro la dirección para obtener el listado.
--Se verifica el estado del objeto que devuelve, y, si es correcto, se cargan los datos en categoriesArray.
--Por último, se llama a showCategoriesList() pasándole por parámetro categoriesArray.
-
-*/
-
 document.addEventListener("DOMContentLoaded", function(e){
-    getJSONData(EXT_TYPE).then(function(resultObj){
+    getJSONData(PRODUCTS_URL).then(function(resultObj){
         if (resultObj.status === "ok")
         {
-            autosArray = resultObj.data.products;
-            showAutosList(autosArray);
+            productsArray = resultObj.data.products;
+            showproductsList(productsArray);
         }
     });
 });
