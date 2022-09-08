@@ -9,14 +9,17 @@ function validation ()
         form.classList.add("valid");
         form.classList.remove("invalid");
         text.innerHTML="El correo electronico ingresado es valido";
-        text.style.color="#00ff00";
+        text.style.color="#008000";
+        
+
     }
     else
     {
         form.classList.remove("valid");
         form.classList.add("invalid");
         text.innerHTML="El correo electronico ingresado NO es valido";
-        text.style.color="#ff0000";
+        text.style.color="#FF0000";
+        
     }
     if (email== "")
     {
