@@ -234,3 +234,11 @@ padding: 5px;
   background-size: cover;
   z-index: 1000;
 }
+
+#textpass {
+  display: block;
+  color: #000;
+  font-weight: 500i;
+  font-style: italic;
+  padding: 5px;
+  }
