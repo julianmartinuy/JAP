@@ -7,16 +7,13 @@ function validation ()
     var textpass= document.getElementById("textpass");
     var pattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     var patternpass=/^[^ ]/;
+   
     if (email.match(pattern))
     {
         form.classList.add("valid");
         form.classList.remove("invalid");
         text.innerHTML="El correo electrónico ingresado es valido";
         text.style.color="#008000";
-        
-
-
-        
     }
     else
     {
@@ -24,6 +21,7 @@ function validation ()
         form.classList.add("invalid");
         text.innerHTML="El correo electrónico ingresado NO es valido";
         text.style.color="#FF0000";
+        
         
     }
     if (email.match(pattern) && pass.match(patternpass)){

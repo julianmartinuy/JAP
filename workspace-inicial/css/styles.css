@@ -195,10 +195,12 @@ a.custom-card:hover {
   padding: 10px;
   margin: auto;
   
+  
 }
 #form #inputBox
 {
   position: relative;
+  
 }
 
 #text {
@@ -209,18 +211,23 @@ font-style: italic;
 padding: 5px;
 }
 
-#form.invalid .tamañoform:before
+#form.invalid .tamañoform::before
 {
+  
   content: '';
   position: absolute;
   right: 12px;
   top: 12px;
   width: 24px;
   height: 24px;
-  background: url(img/invalid.png);
+  background: url(../img/invalid.png);
   background-size: cover;
   z-index: 1000;
+  border-color: #ff3860;
+  
+  
 }
+
 
 #form.valid .tamañoform:before
 {
@@ -230,9 +237,10 @@ padding: 5px;
   top: 12px;
   width: 24px;
   height: 24px;
-  background: url(img/valid.png);
+  background: url(../img/valid.png);
   background-size: cover;
   z-index: 1000;
+  
 }
 
 #textpass {
@@ -242,3 +250,5 @@ padding: 5px;
   font-style: italic;
   padding: 5px;
   }
+
+  
